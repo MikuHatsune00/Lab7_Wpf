@@ -3,7 +3,9 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Lab7_Wpf"
+        xmlns:local="clr-namespace:Lab7_Wpf" 
+        xmlns:collections="clr-namespace:System.Collections;assembly=System.Runtime"
+        xmlns:systems="clr-namespace:System;assembly=System.Runtime"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Window.CommandBindings>
@@ -11,6 +13,18 @@
         <CommandBinding Command="Open" Executed="OpenExecuted"/>
         <CommandBinding Command="Save" Executed="SaveExecuted"/>
     </Window.CommandBindings>
+    <Window.Resources>
+        <collections:ArrayList x:Key="fonts">
+            <systems:String>TimesNewRoman</systems:String>
+            <systems:String>Arial</systems:String>
+            <systems:String>Verdana</systems:String>
+        </collections:ArrayList>
+        <collections:ArrayList x:Key="textsize">
+            <systems:String>12</systems:String>
+            <systems:String>14</systems:String>
+            <systems:String>16</systems:String>
+        </collections:ArrayList>
+    </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -28,15 +42,11 @@
         </Menu>
         <ToolBarTray Grid.Row="1">
             <ToolBar Margin="5" Padding="5">
-                <ComboBox Margin="5" Padding="5" SelectedIndex="0" Width="200" SelectionChanged="ComboBox_SelectionChanged">
-                    <TextBlock Text="Arial"/>
-                    <TextBlock Text="TimesNewRoman"/>
-                    <TextBlock Text="Verdana"/>
+                <ComboBox Margin="5" Padding="5" SelectedIndex="0" Width="200" SelectionChanged="ComboBox_SelectionChanged" ItemsSource="{StaticResource fonts}">
+                   
                 </ComboBox>
-                <ComboBox Margin="5" Padding="5" SelectedIndex="2" Width="50" SelectionChanged="ComboBox_SelectionChanged_1">
-                    <TextBlock Text="12"/>
-                    <TextBlock Text="14"/>
-                    <TextBlock Text="16"/>
+                <ComboBox Margin="5" Padding="5" SelectedIndex="2" Width="50" SelectionChanged="ComboBox_SelectionChanged_1" ItemsSource="{StaticResource textsize}">
+                    
                 </ComboBox>
             </ToolBar>
             <ToolBar  Margin="5" Padding="5">
