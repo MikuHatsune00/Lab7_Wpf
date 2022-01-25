@@ -13,18 +13,7 @@
         <CommandBinding Command="Open" Executed="OpenExecuted"/>
         <CommandBinding Command="Save" Executed="SaveExecuted"/>
     </Window.CommandBindings>
-    <Window.Resources>
-        <collections:ArrayList x:Key="fonts">
-            <systems:String>TimesNewRoman</systems:String>
-            <systems:String>Arial</systems:String>
-            <systems:String>Verdana</systems:String>
-        </collections:ArrayList>
-        <collections:ArrayList x:Key="textsize">
-            <systems:String>12</systems:String>
-            <systems:String>14</systems:String>
-            <systems:String>16</systems:String>
-        </collections:ArrayList>
-    </Window.Resources>
+    
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>

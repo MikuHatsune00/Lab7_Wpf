@@ -1,0 +1,15 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:collections="clr-namespace:System.Collections;assembly=System.Runtime"
+        xmlns:systems="clr-namespace:System;assembly=System.Runtime">
+    <collections:ArrayList x:Key="fonts">
+        <systems:String>TimesNewRoman</systems:String>
+        <systems:String>Arial</systems:String>
+        <systems:String>Verdana</systems:String>
+    </collections:ArrayList>
+    <collections:ArrayList x:Key="textsize">
+        <systems:String>12</systems:String>
+        <systems:String>14</systems:String>
+        <systems:String>16</systems:String>
+    </collections:ArrayList>
+</ResourceDictionary>
